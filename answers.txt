@@ -33,47 +33,38 @@ a) What is the /16 address (e.g. 1.2.0.0) of the company network?
 b) There are 7 hosts in the company network. Write below their addresses
    and their function, for example "1.2.3.4   Mail server".
    Your answer:
-      117.223.5.252:
-		- Send DNS queries to 117.223.195.47 and to 117.223.69.180, 
-		- Send TCP, HTTP messages to 117.223.199.251 	
-      117.223.21.222
-		- Send DNS queries to 117.223.69.180
-		- Send TCP, HTTP messages to 191.217.248.98
+      117.223.5.252
+      117.223.21.222 Victim of DNS DDos Attack
       117.223.45.17 
-		- Send TCP, HTTP messages to 
-			- 97.160.250.32, 
-			- 96.62.40.195, 
-			- 96.183.202.21, 
-			- 96.122.228.241,
-			- ...
-      	 DNS Server
-      117.223.195.47 DNS Server:
-			- Respond only to IP in the company network
+      117.223.69.180 DNS Server
+      117.223.195.47 DNS Server
       117.223.199.251 
-		- Send TCP, HTTP messages to several IP in and outside the network
-
       117.223.202.141
-		- Send
-
 
 c) There are several hosts in the trace that try to attack the company.
    However, there are also two external hosts that access the company's
    servers in a (probably) legitimate way. Give the IP addresses of those
    two benign hosts.
    Your answer:
-      ...
-      ...
+      - 191.217.248.98
+      - ...
 
 d) There are two network attacks in the trace. Give for the first attack the
    following information:
-
    1. Short attack description. Just one line like "SQL injection against
       database server" is enough, but don't be too generic (not just "injection").
-   2. How many hosts participated in the attack
-   3. Start time of the attack (in seconds since begin of trace)
-   4. How many packets were exchanged in the attack (packets sent AND received).
+   2. How many hosts participated in the attack?
+   3. Start time of the attack (in seconds since begin of trace): 
+   4. How many packets were exchanged in the attack (packets sent AND received)? 
 
 e) Give the same information as in question d) for the second attack:
-   ...
+   1. Short attack description: 
+	DDoS attack on 117.223.21.222 by flooding DNS ANY reponse
+   2. How many hosts participated in the attack? 
+	80 (victim included)
+   3. Start time of the attack (in seconds since begin of trace): 
+	57.115 [s]
+   4. How many packets were exchanged in the attack (packets sent AND received)?
+	149 886 (73.9% of total captured packets)
 
 (The order of the attacks doesn't matter)
