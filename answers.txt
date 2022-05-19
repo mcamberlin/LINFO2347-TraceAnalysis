@@ -33,13 +33,15 @@ a) What is the /16 address (e.g. 1.2.0.0) of the company network?
 b) There are 7 hosts in the company network. Write below their addresses
    and their function, for example "1.2.3.4   Mail server".
    Your answer:
-      117.223.5.252 tcp/http request
       117.223.21.222 Victim of DNS DDos Attack
-      117.223.45.17 tcp/http/dns (bcp de dns)
       117.223.69.180 DNS Server
       117.223.195.47 DNS Server
       117.223.199.251 Victim of TCP rst ddos attack
-      117.223.202.141 TCP/http request 
+     
+	Standard computers : 
+	117.223.5.252 Do tcp,dns and http requests with other adress of the company
+	117.223.45.17 Same but with adresses outside of the company too
+	117.223.202.141 Same as the second adress
 
 c) There are several hosts in the trace that try to attack the company.
    However, there are also two external hosts that access the company's
@@ -47,7 +49,7 @@ c) There are several hosts in the trace that try to attack the company.
    two benign hosts.
    Your answer:
       - 191.217.248.98
-      - ...
+      - 123.107.109.70
 
 d) There are two network attacks in the trace. Give for the first attack the
    following information:
