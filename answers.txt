@@ -54,16 +54,16 @@ c) There are several hosts in the trace that try to attack the company.
 d) There are two network attacks in the trace. Give for the first attack the
    following information:
    1. Short attack description.
-
-	DDos attack by flooding TCP Reset packets on 117.223.199.251 on port 80
-	(filter to see the attack ip.dst==117.223.199.251 && tcp.dstport==80 && tcp.flags.reset==1 )
-
+	Port scan attack on 117.223.199.251 with regular connections. The attacker send syn packets, 
+	either the connection is accepted and a SYN/ack is send back ->port open. Or the connection
+	is deny -> rst packet. Or it's ignore and than the attacker know nothing
+	
    2. How many hosts participated in the attack?
-	322 (victim included)
+	367 (victim included)
    3. Start time of the attack (in seconds since begin of trace): 
-	155.24 [s]
+	240.286 [s]
    4. How many packets were exchanged in the attack (packets sent AND received)? 
-	1907 (0.9% of total captured packets)
+	7649 (3.8% of total captured packets)
 
 e) Give the same information as in question d) for the second attack:
    1. Short attack description: 
